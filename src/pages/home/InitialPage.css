@@ -1,0 +1,169 @@
+
+.initial-screen{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* HERO - Topo da página */
+.hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    width: 92%;
+    min-height: 19em;
+    margin-top: 1em;
+    border-radius: 1em;
+    box-shadow: 3px 3px 10px #000;
+    border: solid 2px #000;
+}
+
+.hero-board{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo{
+    height: 10em;
+    width: 10em;
+    margin: 0;
+}
+
+.title{
+    color: #1C86FF;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 800;
+    background-image: linear-gradient(90deg,rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    -webkit-background-clip: text; /* Compatibilidade com navegadores Webkit */
+    background-clip: text;
+    color: transparent; /* Torna o texto transparente para mostrar o fundo */
+    display: inline-block; /* Ajusta a largura ao tamanho do texto */
+}
+
+.info{
+    text-align: center;
+    font-size: 0.9em;
+    margin: 1em 1em 1em;
+    max-width: 25em;
+
+}
+
+/* CONTROLES - Cartões e botão, por onde será feita a intereção com o app */
+.controls{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.cards{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    width: 92%;
+    height: 13em;
+    margin-top: 1em;
+    border-radius: 1em;
+    box-shadow: 3px 3px 10px #000;
+    gap: 0.5em;
+    border: solid 2px #000;
+
+}
+.button-area{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 92%;
+    height: 9em;
+    margin-top: 1em;
+    border-radius: 1em;
+    box-shadow: 3px 3px 10px #000;
+    overflow: hidden;
+    border: solid 2px #000;
+}
+
+.video-bg {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    z-index: 0;
+}
+
+.button-area button{
+    z-index: 1;
+    width: 60%;
+    height: 30%;
+    font-size: 1.5em;
+    box-shadow: 3px 3px 10px #000;
+    border: none;
+    border-radius: 1em;
+    border: solid 2px #000;
+    font-family: var(--text-font);
+    background-color: #bdeeff;
+    transition: transform 0.2s ease-in-out;
+   
+}
+.button-area button:hover{
+ transform: scale(1.1);
+ cursor: pointer;
+}
+
+.button-area button:focus{
+    box-shadow: inset 3px 3px 10px #000;
+    transform: scale(1);
+}
+
+.button-area a{
+    z-index: 1;
+    color: white;
+    font-size: 0.8em;
+    margin-top: 1em;
+    transition: transform 0.2s ease-in-out;
+}
+
+.button-area a:hover{
+    transform: scale(1.1);
+    text-decoration:underline;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .ao-lado{
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero-board{
+        flex-direction: row;
+    }
+
+    .hero{
+        min-height: 25em;
+    }
+
+    .cards{
+        min-height: 25em;
+    }
+    .button-area{
+        height: 17em;
+    }
+    .abaixo{
+        display: none;
+    }
+}
